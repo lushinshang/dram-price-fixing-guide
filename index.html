@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230f7b6c%27/%3E%3Cpath d=%27M12 46 26 30l8 8 18-22%27 stroke=%27white%27 stroke-width=%277%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<title>鷹群編隊：DRAM 價格操縱訴訟為何沒被駁回</title>
+<meta name="description" content="Tom&#x27;s Hardware 報導的 DRAM 價格操縱訴訟，對照法官 Noël Wise 的裁定原文：「鷹群編隊」背後的八項加分因素各被怎麼對待，以及原告指控與法院認定的界線。">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="鷹群編隊：DRAM 價格操縱訴訟為何沒被駁回">
+<meta property="og:description" content="Tom&#x27;s Hardware 報導的 DRAM 價格操縱訴訟，對照法官 Noël Wise 的裁定原文：「鷹群編隊」背後的八項加分因素各被怎麼對待，以及原告指控與法院認定的界線。">
+<meta property="og:image" content="https://lushinshang.github.io/dram-price-fixing-guide/images/og-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="封面插圖：三隻老鷹排成隊形飛過一排記憶體晶片（AI 製作的示意圖）">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="鷹群編隊：DRAM 價格操縱訴訟為何沒被駁回">
+<meta name="twitter:description" content="Tom&#x27;s Hardware 報導的 DRAM 價格操縱訴訟，對照法官 Noël Wise 的裁定原文：「鷹群編隊」背後的八項加分因素各被怎麼對待，以及原告指控與法院認定的界線。">
+<meta name="twitter:image" content="https://lushinshang.github.io/dram-price-fixing-guide/images/og-hero.jpg">
+<meta property="og:url" content="https://lushinshang.github.io/dram-price-fixing-guide/">
+<style>
+:root{
+  --bg:#f9f7f4; --surface:#fffdf9; --ink:#1a1a1a; --muted:#5f5b54; --line:#e4dfd6;
+  --accent:#0f7b6c; --accent-ink:#0b5c51; --note:#f0ebe1; --code:#ece6d8; --link:#1f5f99;
+  --card:#fff6e8; --card-line:#e8c99a; --shadow:0 6px 24px rgba(40,30,10,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1b1a18; --surface:#26241f; --ink:#ece8de; --muted:#aaa497; --line:#3a3730;
+    --accent:#4fc1ad; --accent-ink:#7fd6c6; --note:#2f2c25; --code:#33302a; --link:#8fbde8;
+    --card:#2d2820; --card-line:#5b4a30; --shadow:0 6px 24px rgba(0,0,0,.35);}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+  font:17px/1.7 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:0}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:8px 14px;z-index:300}
+.skip:focus{left:8px;top:8px}
+nav.toc{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.toc ul{list-style:none;margin:0 auto;padding:0 16px;max-width:1120px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  white-space:nowrap;-webkit-overflow-scrolling:touch;min-height:52px;align-items:center}
+nav.toc ul::-webkit-scrollbar{display:none}
+nav.toc a{display:inline-block;padding:8px 12px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:14px;min-height:36px}
+nav.toc a:hover,nav.toc a:focus-visible{background:var(--note);color:var(--ink)}
+a{color:var(--link);overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.page{max-width:1120px;margin:0 auto;padding:0 20px 80px}
+header.hero{padding:56px 0 8px;text-align:center}
+.eyebrow{margin:0 0 8px;color:var(--accent-ink);font-weight:700;letter-spacing:0;font-size:14px}
+h1{margin:0 auto 14px;max-width:820px;font-size:clamp(1.7rem,1.2rem + 2vw,2.6rem);line-height:1.3;text-wrap:balance}
+.byline{margin:0 0 6px;color:var(--muted);font-size:14px}
+.video-link{margin:0 0 28px;font-size:14px}
+figure{margin:32px 0}
+figure img{display:block;width:100%;height:auto;aspect-ratio:var(--ar-d,16/9);object-fit:contain;border-radius:12px;
+  box-shadow:var(--shadow);background:var(--surface);cursor:zoom-in}
+@media (max-width:640px){figure picture img{aspect-ratio:var(--ar-m,9/16)}}
+@media (max-width:640px){figure.hero-figure picture img{max-width:300px;margin:0 auto}}
+figure.hero-figure{max-width:720px;margin-left:auto;margin-right:auto}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+p.figcap{margin:-18px auto 1.4em;text-align:center;font-size:14px;color:var(--muted)}
+figcaption{margin:10px auto 0;max-width:720px;font-size:14px;line-height:1.55;color:var(--muted);text-align:center}
+article{max-width:720px;margin:0 auto}
+article figure.section-figure{margin-left:50%;transform:translateX(-50%);width:min(860px,calc(100vw - 32px))}
+h2{margin:56px 0 12px;font-size:1.55rem;line-height:1.4;scroll-margin-top:72px;text-wrap:balance;
+  border-left:5px solid var(--accent);padding-left:14px;margin-left:-19px}
+h3{margin:36px 0 8px;font-size:1.2rem;line-height:1.45}
+p{margin:0 0 1.1em}
+ul,ol{margin:0 0 1.2em;padding-left:1.4em}
+li{margin:.35em 0}
+strong{font-weight:700}
+code{background:var(--code);padding:.1em .4em;border-radius:5px;font:0.9em ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-word}
+section.summary-card{background:var(--card);border:1px solid var(--card-line);border-radius:14px;padding:6px 22px 10px;margin:24px 0 8px;box-shadow:var(--shadow)}
+section.summary-card h2{margin:14px 0 8px;font-size:1.2rem;border-left:0;padding-left:0;margin-left:0}
+section.summary-card p{margin:0 0 .8em;font-size:16.5px}
+ol.takeaways{padding-left:1.6em}
+ol.takeaways li{margin:.8em 0;padding-left:.2em}
+ol.takeaways li::marker{color:var(--accent-ink);font-weight:700}
+ul.sources li{overflow-wrap:anywhere}
+aside.note{background:var(--note);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:0 0 1.6em;font-size:15px;color:var(--ink)}
+aside.note p,aside.note ul{margin:0 0 .6em}
+aside.note ul{padding-left:1.3em}
+figure.diagram{margin:28px 0}
+.mermaid-scroll{overflow-x:auto;max-width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;-webkit-overflow-scrolling:touch}
+.mermaid-scroll pre{margin:0;font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre;color:var(--ink)}
+.mermaid-scroll svg{display:block;margin:0 auto;height:auto;max-width:100%}
+.table-scroll{overflow-x:auto;margin:0 0 1.6em;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.table-scroll table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;line-height:1.55}
+.table-scroll th,.table-scroll td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.table-scroll th{background:var(--note);font-weight:700}
+.table-scroll tr:last-child td{border-bottom:0}
+.table-scroll td.k{font-weight:600;white-space:nowrap}
+.table-scroll td.nw{white-space:nowrap}
+.table-scroll.wide{margin-left:50%;transform:translateX(-50%);width:min(1040px,calc(100vw - 32px))}
+@media (max-width:640px){.table-scroll.wide{margin-left:0;transform:none;width:auto}}
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible}
+  .table-scroll table{min-width:0}
+  .table-scroll thead{position:absolute;left:-9999px}
+  .table-scroll tr,.table-scroll td{display:block}
+  .table-scroll tr{padding:10px 12px;border-bottom:1px solid var(--line)}
+  .table-scroll tr:last-child{border-bottom:0}
+  .table-scroll td{padding:2px 0;border:0}
+  .table-scroll td.k{color:var(--accent-ink);white-space:normal}
+  .table-scroll td.nw{white-space:normal}
+  .table-scroll td::before{content:attr(data-label) "：";font-weight:700;color:var(--muted);font-size:13px}
+}
+
+p.lede{margin:0 auto 10px;max-width:760px;color:var(--muted);font-size:16px;line-height:1.65}
+figure.timeline{margin:28px 0;max-width:860px;margin-left:50%;transform:translateX(-50%);width:min(860px,calc(100vw - 32px))}
+.lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.lane{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px 12px}
+.lane h4{margin:2px 0 8px;font-size:15px}
+.lane.ln-a h4{color:#c2412f}.lane.ln-b h4{color:#1f5f99}.lane.ln-c h4{color:#0b5c51}
+.lane ol{list-style:none;margin:0;padding:0}
+.lane li{display:flex;gap:10px;margin:0;padding:6px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.45}
+.lane li:first-child{border-top:0}
+.lane .d{flex:0 0 74px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+@media (max-width:760px){.lanes{grid-template-columns:1fr}}
+footer{max-width:720px;margin:64px auto 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.lightbox{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,18,14,.9);align-items:center;justify-content:center;padding:24px}
+.lightbox.is-open{display:flex}
+.lightbox img{max-width:96vw;max-height:90vh;width:auto;height:auto;border-radius:8px;box-shadow:0 12px 48px rgba(0,0,0,.5);background:#fff}
+.lightbox button{position:absolute;top:14px;right:14px;min-width:44px;min-height:44px;padding:8px 14px;border:0;border-radius:999px;
+  background:#fff;color:#222;font-size:15px;cursor:pointer}
+@media (max-width:760px){
+  h2{margin-left:0;border-left:0;padding-left:0;border-top:3px solid var(--accent);padding-top:10px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .page{padding:0 16px 64px}
+  header.hero{padding-top:36px}
+  h2{font-size:1.35rem}
+  section.summary-card{padding:4px 16px 8px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<nav class="toc" aria-label="章節導覽"><ul><li><a href="#sec-1" title="三十秒版">三十秒版</a></li><li><a href="#sec-2" title="裁了什麼，沒裁什麼">裁了什麼，沒裁什麼</a></li><li><a href="#sec-3" title="老鷹的比喻從哪來">老鷹的比喻從哪來</a></li><li><a href="#sec-4" title="四個平行動作">四個平行動作</a></li><li><a href="#sec-5" title="八項加分因素，各被怎麼對待">八項加分因素，各被怎麼對待</a></li><li><a href="#sec-6" title="為什麼這次過關，前案沒有">為什麼這次過關，前案沒有</a></li><li><a href="#sec-7" title="「漲 500%」是哪一個 500%">「漲 500%」是哪一個 500%</a></li><li><a href="#sec-8" title="接下來會怎樣">接下來會怎樣</a></li><li><a href="#sec-9" title="讀這則新聞時的限制">讀這則新聞時的限制</a></li><li><a href="#sec-10" title="製作說明：這篇導讀由 AI 模型完成">製作說明：這篇導讀由 AI 模型完成</a></li><li><a href="#sec-11" title="來源清單">來源清單</a></li></ul></nav>
+<div class="page">
+<header class="hero">
+<p class="eyebrow">深度導讀</p>
+<h1>鷹群編隊：DRAM 價格操縱訴訟為何沒被駁回</h1>
+<p class="lede">法官沒有說 Samsung、SK hynix、Micron 串通，只說這份起訴狀的指控說得通，值得往下審。讀裁定原文，看八項「加分因素」各被怎麼對待</p>
+<p class="byline">整理：2026-11-19　資料截至 2026-11-19</p>
+</header>
+<main id="main"><article>
+<aside class="note"><p>本導讀的分析與撰稿由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿。</p></aside>
+<aside class="note"><p>導讀的對象：Tom&#x27;s Hardware 2026 年 11 月 15 日報導的 DRAM 價格操縱集體訴訟，以及承審法官 Noël Wise 2026 年 11 月 14 日的裁定原文。<a href="https://www.tomshardware.com/tech-industry/big-tech/judge-denies-motion-to-dismiss-dram-price-fixing-lawsuit-against-micron-samsung-and-sk-hynix-says-chipmakers-acted-like-hawks-flying-in-formation-finds-evidence-of-dram-collusion-plausible-after-500-percent-price-surge" target="_blank" rel="noopener noreferrer">Tom&#x27;s Hardware 報導</a>｜<a href="https://litnews.ai/opinions/cand/5-26-cv-06345/ecf-68.pdf" target="_blank" rel="noopener noreferrer">裁定原文（20 頁 PDF）</a></p></aside>
+<figure class="hero-figure"><picture><source media="(max-width: 640px)" srcset="images/hero-9x16.webp"><img src="images/hero-16x9.webp" alt="封面插圖：三隻老鷹排成隊形飛過一排記憶體晶片，其中幾顆晶片亮著琥珀色（AI 製作的示意圖）" width="1672" height="941" loading="eager" style="--ar-d:1672/941;--ar-m:941/1672" tabindex="0" role="button" aria-label="放大圖片：封面插圖：三隻老鷹排成隊形飛過一排記憶體晶片，其中幾顆晶片亮著琥珀色（AI 製作的示意圖）"></picture><figcaption>圖：AI 製作的示意圖，三隻老鷹象徵三家記憶體廠，不是新聞照片。</figcaption></figure>
+<p>同樣是 Samsung、SK hynix、Micron 三家，同樣是北加州聯邦地方法院，同一條《休曼法》第 1 條。2020 年 11 月，一場指控三家限制記憶體供給的集體訴訟在這個法院被終局駁回（with prejudice，原告不得再補件重提），2022 年第九巡迴上訴法院維持原判。六年後的 2026 年 11 月 14 日，類似的指控換了一批原告，法官 Noël Wise 卻寫下：三家請求駁回起訴的動議，不准。</p>
+<p>Tom&#x27;s Hardware 的報導抓到了最好記的一句：法官說，原告描述的不只是老鷹互相盯著，更像是老鷹排成隊形一起飛。這句話底下有一整套判斷標準。裁定原文把八項「加分因素」（plus factors：光有「大家做了類似的事」還不夠，原告得另外拿出讓人懷疑事前有協議的情況）逐項過篩，五項算數，兩項不算，市場結構被擺在中性。</p>
+<section class="summary-card" aria-labelledby="sec-1">
+<h2 id="sec-1">三十秒版</h2>
+<ol class="takeaways"><li><strong>這是駁回動議的裁定，不是判決。</strong>法官把原告的指控當作真的來評估，結論只是這份訴狀的說法說得通，沒有認定三家串通。</li><li><strong>具名原告是 17 位消費者與小企業，來自五個州</strong>（擬議的集體訴訟），指控三家自 2022 年 10 月起，在傳統 DRAM（不含 HBM，即 AI 加速器用的高頻寬記憶體）上維持一個限制供給的協議。</li><li><strong>法官採計了五項加分因素</strong>（轉向 HBM 並鎖定 AI 供給、延後新廠、退出 DDR4、近乎相同的客戶審查、1998–2002 年價格操縱卡特爾的歷史），<strong>兩項不採計、一項視為中性</strong>（對投資人的談話與產業會議碰面不採計，寡占市場結構中性）。</li><li><strong>和 2018 年的前案相比，這次的差別在「誰先動」和「能不能回頭」</strong>：前案法官形容為單一領頭者帶頭、其他人跟；這次原告描述的是 SK hynix 與 Micron 先減產，而且幾個動作難以逆轉。</li><li><strong>「一年漲 500%」要看口徑。</strong>裁定裡的 500% 是零售價自 2025 年 10 月初起算；原告主張的總漲幅是 18 個月 697%。</li><li><strong>接下來</strong>：三家要在 2026 年 12 月 7 日前答辯，初次案件管理會議訂在 2027 年 1 月 12 日。</li></ol>
+</section>
+<h2 id="sec-2">裁了什麼，沒裁什麼</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">項目</th><th scope="col">內容</th></tr></thead><tbody><tr><td class="k" data-label="項目">案名與案號</td><td data-label="內容">Garciaguirre et al. v. Samsung Electronics Co., Ltd. et al.，N.D. Cal.，5:26-cv-06345-NW</td></tr><tr><td class="k" data-label="項目">承審法官</td><td data-label="內容">Noël Wise</td></tr><tr><td class="k" data-label="項目">具名原告</td><td data-label="內容">17 位消費者與小企業，來自五個州（擬議集體訴訟）</td></tr><tr><td class="k" data-label="項目">被告</td><td data-label="內容">Samsung Electronics 與 Samsung Semiconductor、SK hynix、Micron Technology</td></tr><tr><td class="k" data-label="項目">起訴日</td><td data-label="內容">2026 年 6 月 25 日</td></tr><tr><td class="k" data-label="項目">裁定日</td><td data-label="內容">2026 年 11 月 14 日（Tom&#x27;s 報導在 11 月 15 日）</td></tr><tr><td class="k" data-label="項目">主要主張</td><td data-label="內容">《休曼法》第 1 條（共謀限制貿易）；另有加州、佛羅里達、明尼蘇達、紐約、威斯康辛的州法主張</td></tr></tbody></table></div>
+<p><a href="https://litnews.ai/opinions/cand/5-26-cv-06345/ecf-68.pdf" target="_blank" rel="noopener noreferrer">裁定原文</a>的標題是「駁回被告的駁回動議（motion to dismiss），並准許延後初期案件期限」。駁回動議（motion to dismiss）的審查有一條基本規矩：法官要把原告寫在訴狀裡的具體事實當作真的（包裝成事實的法律結論除外），再問這些事實能不能合理推論出有協議（plausible，說得通），而不是問「是真的嗎」。所以<strong>裁定裡凡是談到減產、客戶審查、不擴產的段落，講的都是原告的指控</strong>。法官自己寫道，三家每一個決定「都有可能」是各自獨立做出的，即使是幾乎同時做的。</p>
+<p>這一步的門檻放得很寬。裁定引第九巡迴的 SmileDirectClub 案：<strong>原告不必提出能排除合法獨立行為可能性的事實</strong>；再引前案 DRAM II：只需事實「大致上」與單方行動不符、與明示協調大致相符。但門檻也不是零：光有行為相似不夠，反壟斷案要求原告在平行行為之外再提出更多東西。</p>
+<p>裁定另外描述了 DRAM 的銷售通路：大型系統廠（Dell、HP、Lenovo、Apple）、資料中心業者，以及把模組賣給小品牌、零售商或消費者的模組廠。Dell、HP、Lenovo、Apple 不在具名原告之列，裁定沒有談這件事。</p>
+<h2 id="sec-3">老鷹的比喻從哪來</h2>
+<p>三家在庭上引用的是法官 Richard Posner 寫過的一句話：寡占市場裡的競爭者，彼此盯得像老鷹一樣。意思是，在只剩幾家的市場，大家看著對方的價格與產量做決定，本來就是常態。</p>
+<p><a href="https://litnews.ai/opinions/cand/5-26-cv-06345/ecf-68.pdf#page=20" target="_blank" rel="noopener noreferrer">裁定原文</a>的回應是：</p>
+<aside class="note"><p>原告的指控超出了老鷹互相觀察；其主張更像是排成隊形飛行的老鷹，這是老鷹平常不會做的事。</p></aside>
+<p>（原文：Plaintiffs&#x27; allegations go beyond hawks watching each other; their contentions are more akin to hawks flying in formation – an activity that hawks ordinarily do not do.）</p>
+<p>比喻背後是第九巡迴對加分因素的要求：要有這些因素，才能把平行行為放進一個暗示事前有協議的脈絡。法官的審查分三步：先確認平行行為（大家做了類似的事）成立，再逐項檢視加分因素，最後整體評估。</p>
+<h2 id="sec-4">四個平行動作</h2>
+<figure class="timeline" aria-label="DRAM 訴訟相關事件時間線"><div class="lanes"><div class="lane ln-a"><h4>供給動作（原告指控）</h4><ol><li><span class="d">2022-10-26</span><span class="t">SK hynix 宣布減資本支出與減產</span></li><li><span class="d">2022-11-16</span><span class="t">Micron 宣布減產</span></li><li><span class="d">2023-04-07</span><span class="t">Samsung 宣布減產</span></li><li><span class="d">2025-04～06</span><span class="t">三家宣布退出主流 DDR4</span></li></ol></div><div class="lane ln-b"><h4>產品與客戶（原告指控）</h4><ol><li><span class="d">2025-12-03</span><span class="t">Micron 宣布關閉 Crucial</span></li><li><span class="d">2026-01</span><span class="t">三家導入近乎相同的客戶審查</span></li></ol></div><div class="lane ln-c"><h4>訴訟程序</h4><ol><li><span class="d">2026-06-25</span><span class="t">原告起訴</span></li><li><span class="d">2026-11-14</span><span class="t">法院駁回被告的駁回動議，案件續行</span></li><li><span class="d">2026-12-07</span><span class="t">答辯期限</span></li><li><span class="d">2027-01-12</span><span class="t">初次案件管理會議</span></li></ol></div></div><figcaption>圖：原告指控的動作與訴訟程序，依日期排列（除訴訟程序外，皆為原告指控，見裁定第 I.C 節）。</figcaption></figure>
+<p><a href="https://litnews.ai/opinions/cand/5-26-cv-06345/ecf-68.pdf#page=4" target="_blank" rel="noopener noreferrer">裁定</a>把原告的指控整理成四條時間線，其中法官確認「至少三項」的平行行為成立。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">時間</th><th scope="col">動作（均為原告指控）</th><th scope="col">法官怎麼看</th></tr></thead><tbody><tr><td data-label="時間">2022-10-26 起</td><td data-label="動作（均為原告指控）">SK hynix 宣布減少資本支出與低毛利產品產量；Micron 在 2022-11-16 宣布減產；Samsung 在 2023-04-07 才宣布減產</td><td data-label="法官怎麼看"><strong>成立</strong>。前兩家相隔三週；Samsung 晚了約四個半月，時間上不那麼緊，但法官認為這樣的落差不至於否定平行行為</td></tr><tr><td class="k" data-label="時間">2023 年起</td><td data-label="動作（均為原告指控）">三家把產能與資本支出從傳統 DRAM 轉向 HBM</td><td data-label="法官怎麼看"><strong>成立</strong>，但訴狀單寫「同時」只是結論，法官是靠訴狀的其他事實推定三家在 2023 年初到年中都開始轉向</td></tr><tr><td data-label="時間">2024–2025</td><td data-label="動作（均為原告指控）">退出老世代：Samsung 與 SK hynix 在 2024 年關掉 DDR3 產線；三家在 2025 年 4 至 6 月間都宣布逐步退出主流 DDR4</td><td data-label="法官怎麼看"><strong>DDR4 成立，DDR3 不採計</strong>，因為訴狀自己承認 Micron 仍有少量 DDR3 生產</td></tr><tr><td data-label="時間">2025 年第三季起</td><td data-label="動作（均為原告指控）">價格大漲之下，沒有一家擴產傳統 DRAM，或宣布要大幅擴產</td><td data-label="法官怎麼看">不算獨立的「行為」，但被視為前面減產決定的另一面，放進加分因素裡評估</td></tr></tbody></table></div>
+<h2 id="sec-5">八項加分因素，各被怎麼對待</h2>
+<p>法官在<a href="https://litnews.ai/opinions/cand/5-26-cv-06345/ecf-68.pdf#page=11" target="_blank" rel="noopener noreferrer">裁定的第 III.B 節</a>把原告提出的加分因素整理成八項（原告自己列了十一項，有些是同一件事的變形），逐項審酌。</p>
+<figure class="section-figure"><picture><source media="(max-width: 640px)" srcset="images/fig-factors-zh-mobile.svg"><img src="images/fig-factors-zh.svg" alt="八項加分因素的結果：採計五項、不採計兩項、中性一項" width="1000" height="736" loading="lazy" style="--ar-d:1000/736;--ar-m:420/620" tabindex="0" role="button" aria-label="放大圖片：八項加分因素的結果：採計五項、不採計兩項、中性一項"></picture><figcaption>圖：法官對八項加分因素的處理（本文依裁定第 III.B 節整理）。</figcaption></figure>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">加分因素</th><th scope="col">裁定</th><th scope="col">理由摘要</th></tr></thead><tbody><tr><td data-label="加分因素">轉向 HBM、鎖定 AI 供給、拒簽 DRAM 長約、Micron 關閉 Crucial、不擴產傳統 DRAM</td><td data-label="裁定"><strong>採計（單獨不夠，加上相關動作才倒向原告）</strong></td><td data-label="理由摘要">單獨轉向 HBM 不夠，加上難以回頭的動作才過（見下文）</td></tr><tr><td data-label="加分因素">停建或延後新廠（Samsung、Micron）</td><td data-label="裁定"><strong>採計</strong></td><td data-label="理由摘要">產能承諾不易逆轉，法官類比第九巡迴對煉油廠產能的見解</td></tr><tr><td class="k" data-label="加分因素">退出 DDR4</td><td data-label="裁定"><strong>採計</strong></td><td data-label="理由摘要">三家在同一季內動作；DDR4 當時仍在廣泛使用，一度每 GB 比 DDR5 還貴</td></tr><tr><td data-label="加分因素">近乎相同的客戶審查（2026 年 1 月）</td><td data-label="裁定"><strong>採計，法官稱有力支持</strong></td><td data-label="理由摘要">法官評價最高的一項（見下文）</td></tr><tr><td data-label="加分因素">對投資人的公開談話</td><td data-label="裁定">不採計</td><td data-label="理由摘要">與 2022 年第九巡迴判決處理過的陳述類似，未能區分</td></tr><tr><td class="k" data-label="加分因素">在產業會議碰面</td><td data-label="裁定">不採計</td><td data-label="理由摘要">未指出實際交換了什麼資訊</td></tr><tr><td class="k" data-label="加分因素">寡占市場結構</td><td data-label="裁定">中性</td><td data-label="理由摘要">三家合計超過九成市占，與前案結構相近</td></tr><tr><td data-label="加分因素">1998–2002 年價格操縱卡特爾的歷史</td><td data-label="裁定"><strong>採計</strong></td><td data-label="理由摘要">第九巡迴在前案就認為這類歷史可以算，因為涉及同樣被指控的協調與行為人，本案法官照引（Samsung、Hynix 認罪受罰，Micron 參與但以污點證人獲豁免）</td></tr></tbody></table></div>
+<p><strong>轉向 HBM 本身不算數。</strong>法官同意被告的說法：依訴狀自己的指控，2023、2024 年轉向時 HBM 比 DRAM 賺錢。裁定接著說，投資新興市場本來有風險，但不是那種沒有事前協議就沒人敢做的險棋。真正讓這項加分因素過關的，是「回不去」的組合。據訴狀，三家都簽了鎖定 HBM 供給的多年期合約，Samsung 與 SK hynix 同時拒絕與主要 DRAM 客戶簽長約；Micron 在 2025 年 12 月 3 日宣布關閉 Crucial，那時消費端 DRAM 價格正在歷史高點；到訴狀提出時，三家沒有一家宣布要大幅擴產傳統 DRAM。法官寫道，這些動作屬於「在訴狀階段看來，沒有哪家理性的公司會在缺乏事前協議下這麼做」的那一類。</p>
+<p>補一筆產業背景：裁定談到三家鎖定 AI 客戶的供給，但沒有提到 Micron 這批協議。Micron 在 2026 年 6 月 24 日的財報電話會議上說，已簽下 16 份多年期客戶協議，約占其至 2030 年 DRAM 出貨量的兩成，其中 14 份的最低合約金額合計約 1,000 億美元，預計收到約 220 億美元的現金訂金與相關財務承諾（<a href="https://transcripts.platformaeronaut.com/transcripts/MU-3Q26-transcript" target="_blank" rel="noopener noreferrer">第三方轉錄逐字稿</a>與 <a href="https://www.trendforce.com/news/2026/06/25/news-decoding-microns-scas-reportedly-20-of-dram-output-toward-50-of-long-term-memory-revenue/" target="_blank" rel="noopener noreferrer">TrendForce 報導</a>，皆為二手來源）。</p>
+<p><strong>客戶審查是被法官評價最高的一項。</strong>訴狀說，三家在 2026 年 1 月同時導入更嚴格的 DRAM 訂單審查，一位 GPU 與伺服器供應商的主管形容，三家都開始問他們賣給誰、數量多少、客戶需求是不是真的。法官同意原告的說法：同時採用幾乎相同的問題，「難以在沒有協調的情況下解釋」，也讓每家都能看見誰在買多少，類似 1998 至 2002 年那次卡特爾的監控機制。被告的反駁是 AI 需求太大、產能被吃光，所以才審查；法官指出時間對不上：AI 熱潮在 2023 年就開始，審查卻到 2026 年 1 月才出現，依原告主張，那時或稍早，傳統 DRAM 的獲利已超過 HBM。</p>
+<p><strong>沒能加分的三項，也透露法官的標準。</strong>對投資人談資本紀律，前案第九巡迴就認為不夠；這次 Micron 在 2022 年 9 月 29 日的說法（供給「依產業需求成長」、目標是「維持穩定的位元供給占比與供給紀律」），法官認為與前案相似，不採計。產業會議碰面，即使訴狀列出日期與出席主管，法官仍認為前案判決看來幾乎不留給它權重的空間，除非能指出實際交換了什麼資訊，或他們在會上達成協調供給的協議。寡占結構則如上表，與前案相近，放在中性。</p>
+<h2 id="sec-6">為什麼這次過關，前案沒有</h2>
+<p>2018 年 4 月 27 日提起的前案（In re DRAM Indirect Purchaser Antitrust Litigation），集體期間是 2016 年 6 月 1 日至 2018 年 2 月 1 日；本案訴狀則稱 2016 年 8 月至 2018 年 8 月價格漲了 165%。2020 年 11 月，地院在給過一次修正機會後，以 with prejudice 終局駁回；2022 年 3 月 7 日第九巡迴維持原判，<a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2022/03/07/21-15125.pdf" target="_blank" rel="noopener noreferrer">判決原文</a>的說法是，被告在寡占產業裡的行為「更可能是合法、未經編排的自由市場行為」（more likely explained by lawful, unchoreographed free-market behavior）。</p>
+<p>Wise 法官在裁定中把兩案的差別講得很具體。前案承審的 White 法官把案情形容為「follow the leader」：由市占最大的那家帶頭漲價或減產，其他家跟。裁定對這次指控的描述是另一幅畫面：<strong>減產由 SK hynix 與 Micron 先動，不是單一領頭者帶頭</strong>（原告引用 2025 年第三季市占：SK hynix 33.2%、Samsung 32.6%、Micron 25.7%）；訴狀說 Samsung 在 2023 年 1 月還公開表示不會有人為減產，到 4 月 7 日卻宣布減產；幾個決定一旦做下就難以甚至無法收回，包括多年期鎖單與關閉消費品牌；原告主張漲幅近 700%，至訴狀提出時仍沒有任何一家擴產或宣布大幅擴產傳統 DRAM（HBM 則持續擴產）；再加上同時出現的客戶審查，以及卡特爾的歷史。</p>
+<figure class="section-figure"><picture><source media="(max-width: 640px)" srcset="images/fig-flow-zh-mobile.svg"><img src="images/fig-flow-zh.svg" alt="駁回動議的兩道關卡，以及本案與前案的差別" width="1000" height="882" loading="lazy" style="--ar-d:1000/882;--ar-m:420/915" tabindex="0" role="button" aria-label="放大圖片：駁回動議的兩道關卡，以及本案與前案的差別"></picture><figcaption>圖：法官判斷駁回動議的兩道關卡，與本案和前案的差別（本文依裁定與前案判決整理）。</figcaption></figure>
+<aside class="note"><p>重點：法官是把各項合起來看的。單獨一項或許都能用合法理由解釋，但這次的組合在法官眼中，足以讓案子進入下一階段。</p></aside>
+<h2 id="sec-7">「漲 500%」是哪一個 500%</h2>
+<p>Tom&#x27;s 報導的標題提到 500% 的漲價，內文寫價格「一年內最多漲 500%」。<a href="https://litnews.ai/opinions/cand/5-26-cv-06345/ecf-68.pdf#page=5" target="_blank" rel="noopener noreferrer">裁定原文第 5–6 頁</a>的數字更細，而且口徑不同：</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">口徑</th><th scope="col">數字</th><th scope="col">出處</th></tr></thead><tbody><tr><td data-label="口徑">傳統 DRAM 價格，到 2025 年第三季的一年內</td><td data-label="數字">+171.8%</td><td data-label="出處">訴狀，裁定引用</td></tr><tr><td class="k" data-label="口徑">合約價（非零售）</td><td data-label="數字">2025 年第四季約 +50%、2026 年第一季 +93%、第二季 +58%</td><td data-label="出處">訴狀引用的獨立報導</td></tr><tr><td class="k" data-label="口徑">零售價</td><td data-label="數字">自 2025 年 10 月初起算 +500%（截至 2026 年 6 月 25 日起訴時）</td><td data-label="出處">訴狀引用的獨立報導</td></tr><tr><td class="k" data-label="口徑">原告主張的總漲幅</td><td data-label="數字">18 個月 +697%</td><td data-label="出處">訴狀</td></tr></tbody></table></div>
+<figure class="section-figure"><picture><source media="(max-width: 640px)" srcset="images/fig-price-zh-mobile.svg"><img src="images/fig-price-zh.svg" alt="四種價格口徑的漲幅長條圖" width="1000" height="724" loading="lazy" style="--ar-d:1000/724;--ar-m:420/750" tabindex="0" role="button" aria-label="放大圖片：四種價格口徑的漲幅長條圖"></picture><figcaption>圖：四種價格口徑的漲幅（原告指控與其引用的報導，本文依裁定第 I.C 節整理）。</figcaption></figure>
+<p>500% 只對應零售價那一列；原告主張的約 700% 算的是 18 個月，不是一年。Tom&#x27;s Hardware 自己追蹤零售 DDR5 套件最低標價，也有約 500% 的 12 個月漲幅（<a href="https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/" target="_blank" rel="noopener noreferrer">二手報導轉引</a>，標價不等於成交價）。所以<strong>讀到「一年 500%」時，最好先問一句：是哪個價格，從哪個月算起</strong>。</p>
+<h2 id="sec-8">接下來會怎樣</h2>
+<p><a href="https://litnews.ai/opinions/cand/5-26-cv-06345/ecf-68.pdf#page=20" target="_blank" rel="noopener noreferrer">裁定</a>要求三家在 2026 年 12 月 7 日前提出答辯（answer）。三家在 2026 年 10 月 23 日申請延後初期期限，原告未提出異議，法院又因辯論期日重排了約三週而同步順延，把初次案件管理會議訂在 2027 年 1 月 12 日上午 9 點，Tom&#x27;s 的「2027 年 1 月」就是這一天。</p>
+<p><strong>這之後才進入檢驗這些指控是不是事實的階段</strong>，包括證據開示（discovery）。</p>
+<h2 id="sec-9">讀這則新聞時的限制</h2>
+<ul><li>新聞面以 Tom&#x27;s 一篇為主，另有二手報導確認有其他媒體報導；法律面依兩份法院文件；Micron 協議與零售價數字來自二手或第三方轉錄。Tom&#x27;s 的標題與首段說法比裁定強，裁定只審指控是否說得通，沒有評估證據；「一年最多漲 500%」也未註明是零售價，本文以裁定為準。</li><li>本文寫「三家做了某事」時，指的都是原告的指控；法官在駁回動議的階段把這些指控當作真的來評估。</li><li>本文不判斷三家有沒有串通。</li></ul>
+<h2 id="sec-10">製作說明：這篇導讀由 AI 模型完成</h2>
+<p>本導讀的分析、撰稿、查證與審稿皆由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿。主控與撰稿為 Claude Sonnet 5.5；研究由兩個 Claude 子代理分別處理法院文件與記憶體產業事實；獨立審稿由兩位 Claude Opus 分別負責事實與編輯可讀性，修改後另有一位 Claude Opus 終審；最後再由 Claude Opus 依一份潤稿準則調整語句並標示重點，發布前另做一輪輕修，分享文同樣如此。重要說法須有法院文件等第一手來源才寫成確定事實，只有單方來源的內容降級標示。來源為英文，本文以台灣用語重述，沒有另做全文譯本。寫作參考了一則社群貼文的切角，其中的事實主張都另行查證，查無一手或可靠來源者不採用，也不複製貼文文字。封面是 AI 生成的示意插圖（Codex 生圖，不含文字與數據，不是新聞照片）；三張資訊圖由 Claude 依上文的裁定整理，以程式繪成向量圖，圖中數字都取自上文；時間線與表格由程式依文字資料產生。</p>
+<h2 id="sec-11">來源清單</h2>
+<ul class="sources"><li><a href="https://litnews.ai/opinions/cand/5-26-cv-06345/ecf-68.pdf" target="_blank" rel="noopener noreferrer">Garciaguirre et al. v. Samsung Electronics Co., Ltd. et al., No. 5:26-cv-06345-NW, Order Denying Motion to Dismiss; Granting Administrative Motion to Continue Early Case Deadlines（N.D. Cal., Doc. 68）</a>，2026-11-14（法院命令 PDF，第三方鏡像，未與法院網站比對）</li><li><a href="https://www.tomshardware.com/tech-industry/big-tech/judge-denies-motion-to-dismiss-dram-price-fixing-lawsuit-against-micron-samsung-and-sk-hynix-says-chipmakers-acted-like-hawks-flying-in-formation-finds-evidence-of-dram-collusion-plausible-after-500-percent-price-surge" target="_blank" rel="noopener noreferrer">Tom&#x27;s Hardware：Judge denies motion to dismiss DRAM price-fixing lawsuit against Micron, Samsung, and SK hynix</a>，Jowi Morales，2026-11-15</li><li><a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2022/03/07/21-15125.pdf" target="_blank" rel="noopener noreferrer">In re DRAM Indirect Purchaser Antitrust Litigation, No. 21-15125, 28 F.4th 42（9th Cir.）</a>，2022-03-07</li><li><a href="https://www.pymnts.com/cpi-posts/samsung-sk-hynix-and-micron-lose-bid-to-dismiss-us-dram-antitrust-suit/" target="_blank" rel="noopener noreferrer">PYMNTS／CPI：Samsung, SK Hynix and Micron Lose Bid to Dismiss US DRAM Antitrust Suit</a>，2026-11-16（二手報導）</li><li><a href="https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal" target="_blank" rel="noopener noreferrer">LitNews：Garciaguirre v. Samsung 案報導（含命令連結）</a>（二手）</li><li><a href="https://transcripts.platformaeronaut.com/transcripts/MU-3Q26-transcript" target="_blank" rel="noopener noreferrer">Micron FQ3 2026 財報電話會議逐字稿（第三方轉錄）</a>，2026-06-24（第三方轉錄，二手）</li><li><a href="https://www.trendforce.com/news/2026/06/25/news-decoding-microns-scas-reportedly-20-of-dram-output-toward-50-of-long-term-memory-revenue/" target="_blank" rel="noopener noreferrer">TrendForce：Decoding Micron&#x27;s SCAs</a>，2026-06-25（二手）</li><li><a href="https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/" target="_blank" rel="noopener noreferrer">HWBusters：DDR5 memory prices are up 500% in a year</a>，2026-08-18（二手；轉引 Tom&#x27;s Hardware 零售標價追蹤）</li></ul>
+</article></main>
+<footer>
+<p>本頁為對 Tom&#x27;s Hardware 報導與 N.D. Cal. 裁定原文的非官方導讀，原文版權屬原作者與原發布單位。本導讀的分析、撰稿、查證與審稿皆由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿（分工見文末〈製作說明〉）。內容資料截至 2026-11-19。</p>
+</footer>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="圖片放大檢視"><button type="button" aria-label="關閉放大檢視">關閉（Esc）</button><img src="" alt=""></div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox'), big=box.querySelector('img'), btn=box.querySelector('button'), last=null;
+  function open(img){last=img;big.src=img.currentSrc||img.src;big.alt=img.alt;box.classList.add('is-open');btn.focus();}
+  function close(){box.classList.remove('is-open');big.removeAttribute('src');if(last){last.focus();}}
+  document.querySelectorAll('figure img').forEach(function(img){
+    img.addEventListener('click',function(){open(img);});
+    img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img);}});
+  });
+  box.addEventListener('click',function(e){if(e.target===box||e.target===btn){close();}});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape'){close();}
+    if(e.key==='Tab'){e.preventDefault();btn.focus();}
+  });
+})();
+</script>
+</body>
+</html>

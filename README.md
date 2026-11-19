@@ -1,6 +1,8 @@
 # 鷹群編隊：DRAM 價格操縱訴訟為何沒被駁回（深度導讀）
 
-網頁：https://lushinshang.github.io/dram-price-fixing-guide/（2026-11-19 發布，資料截至 2026-11-19）
+網頁：https://lushinshang.github.io/dram-price-fixing-guide/
+
+2026-11-19 發布，資料截至 2026-11-19。
 
 對 Tom's Hardware 2026-11-15 報導的 DRAM 價格操縱集體訴訟，對照承審法官 Noël Wise 2026-11-14 的裁定原文（N.D. Cal. 5:26-cv-06345-NW, Doc. 68）所做的深度導讀。
 

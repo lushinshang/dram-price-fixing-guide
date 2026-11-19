@@ -8,5 +8,10 @@
 
 報導常見的「一年漲 500%」口徑不一：裁定的 500% 是零售價自 2025 年 10 月初起算，原告主張的總漲幅是 18 個月 697%。三家須在 12 月 7 日前答辯。
 
+來源：
+裁定原文（第三方鏡像）：https://litnews.ai/opinions/cand/5-26-cv-06345/ecf-68.pdf
+Tom's Hardware（2026-11-15）：https://www.tomshardware.com/tech-industry/big-tech/judge-denies-motion-to-dismiss-dram-price-fixing-lawsuit-against-micron-samsung-and-sk-hynix-says-chipmakers-acted-like-hawks-flying-in-formation-finds-evidence-of-dram-collusion-plausible-after-500-percent-price-surge
+前案第九巡迴判決（2022-03-07）：https://cdn.ca9.uscourts.gov/datastore/opinions/2022/03/07/21-15125.pdf
+
 整理與查證由 AI 模型完成，未經人工逐句校稿，詳見網頁〈製作說明〉。
 完整導讀：https://lushinshang.github.io/dram-price-fixing-guide/
